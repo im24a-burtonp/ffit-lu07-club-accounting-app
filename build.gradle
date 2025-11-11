@@ -19,7 +19,7 @@ repositories {
 sourceSets {
     main {
         java {
-            srcDir "$buildDir/generated/openapi/src/main/java"
+            srcDirs += "$buildDir/generated/openapi/src/main/java"
         }
     }
 }
@@ -38,11 +38,11 @@ dependencies {
     runtimeOnly 'io.jsonwebtoken:jjwt-jackson:0.11.5'
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
-    testCompileOnly 'org.projectlombok:lombok'
-    testAnnotationProcessor 'org.projectlombok:lombok'
 
     // dependencies for testing
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testCompileOnly 'org.projectlombok:lombok'
+    testAnnotationProcessor 'org.projectlombok:lombok'
 }
 
 compileJava.dependsOn tasks.openApiGenerate
