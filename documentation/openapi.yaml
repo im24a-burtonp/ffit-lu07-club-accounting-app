@@ -5,8 +5,10 @@ info:
   description: >
     REST API for a web based accounting application.
 servers:
-  - url: http://localhost:8080/api
-    description: Local development environment
+  - url: https://localhost:8443
+    description: Local development environment (HTTPS)
+  - url: http://localhost:8080
+    description: Local development environment (HTTP)
 
 paths:
   /projects:

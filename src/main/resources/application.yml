@@ -9,3 +9,22 @@ spring:
     show-sql: true
     properties:
       hibernate.format_sql: true
+
+jwt:
+  secret: local-development-jwt-secret-for-experiments-2026
+
+db:
+  username: localuser
+  password: "NewPassword123!"
+
+server:
+  port: 8443
+  ssl:
+    enabled: true
+    key-store: classpath:keystore/keystore.p12
+    key-store-password: password
+    key-store-type: PKCS12
+
+logging:
+  level:
+    ch.bzz: INFO
