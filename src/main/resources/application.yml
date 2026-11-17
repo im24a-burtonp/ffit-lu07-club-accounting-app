@@ -15,7 +15,7 @@ jwt:
 
 db:
   username: localuser
-  password: "NewPassword123!"
+  password: "localpassword"
 
 server:
   port: 8443
